@@ -7,7 +7,7 @@ public class Student {
 	private String surname;
 	//setters and getters
 	
-	private static long counter = 10000;
+	private static long counter = 1000;
 	
 	public long getStID() {
 		return stID;
