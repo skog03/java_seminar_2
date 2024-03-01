@@ -51,10 +51,27 @@ public class Professor {
 
 	//constructors
 	//no-argument constructor, which initializes the default values
-	//public void ProfConst 
+	public Professor() {
+		setpID();
+		setName("John");
+		setSurname("Doe");
+		setProfdegree(degree.other);
+	}
 	
-	//no argument constructor, which initializes variables based on input parameters
-	
+	//argument constructor, which initializes variables based on input parameters
+	public Professor(String name, String surname, degree profdegree) {
+		setpID(); 
+		setName(name);
+		setSurname(surname);
+		setProfdegree(profdegree);
+	}
+
 	//toString
+	@Override
+	public String toString() {
+		return pID + ": " + name + " " + surname + "(" + profdegree + ")";
+	}
+	
+	
 	//other
 }
