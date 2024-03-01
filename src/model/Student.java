@@ -39,12 +39,12 @@ public class Student {
 	//no-argument constructor, which initializes the default values
 	public Student() {
 		setStID();
-		setName("John");
-		setSurname("Doe");
+		setName("Mary");
+		setSurname("Jane");
 	}
 	
 	//argument constructor, which initializes variables based on input parameters
-	public Student(String name, String surname, degree profdegree) {
+	public Student(String name, String surname) {
 		setStID(); 
 		setName(name);
 		setSurname(surname);
