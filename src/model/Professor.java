@@ -5,7 +5,7 @@ public class Professor {
 	private long pID;
 	private String name;
 	private String surname;
-	private degree profdegree;
+	private Degree profdegree;
 	//setters and getters
 	
 	private static long counter = 0;
@@ -39,14 +39,14 @@ public class Professor {
 		this.name = "Undefined";
 	}
 	
-	public degree getProfdegree() {
+	public Degree getProfdegree() {
 		return profdegree;
 	}
-	public void setProfdegree(degree profdegree) {
+	public void setProfdegree(Degree profdegree) {
 		if(name != null)
 			this.profdegree = profdegree;
 		else
-			this.profdegree = degree.other;
+			this.profdegree = Degree.other;
 	}
 
 	//constructors
@@ -55,11 +55,11 @@ public class Professor {
 		setpID();
 		setName("John");
 		setSurname("Doe");
-		setProfdegree(degree.other);
+		setProfdegree(Degree.other);
 	}
 	
 	//argument constructor, which initializes variables based on input parameters
-	public Professor(String name, String surname, degree profdegree) {
+	public Professor(String name, String surname, Degree profdegree) {
 		setpID(); 
 		setName(name);
 		setSurname(surname);
