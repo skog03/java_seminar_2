@@ -9,10 +9,10 @@ public class Course {
 	//setters and getters
 	private static long counter = 100000;
 	
-	public long getStID() {
+	public long getcID() {
 		return cID;
 	}
-	public void setStID() {
+	public void setcID() {
 		this.cID = counter;
 		counter++;
 	}
@@ -49,6 +49,27 @@ public class Course {
 			this.professor = professor;
 		else
 			this.professor = new Professor();
+	}
+	
+	//constructors
+	public Course() {
+		setcID();
+		setTitle("Course");
+		setCreditPoints(2);
+		setProfesor(new Professor());
+	}
+	
+	//argument constructor, which initializes variables based on input parameters
+	public Course(String title, int creditPoints, Professor professor) {
+		setcID(); 
+		setTitle(title);
+		setCreditPoints(creditPoints);
+		setProfesor(professor);
+	}
+	//toString
+	@Override
+	public String toString() {
+		return cID + ": " + title + " (" + creditPoints + " CP), " + professor.getName().charAt(0) + ". " + professor.getSurname();
 	}
 	
 }
