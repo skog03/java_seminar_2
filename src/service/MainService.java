@@ -9,7 +9,6 @@ public class MainService {
 		System.out.println(pr1);
 		Professor pr2 = new Professor("Karina", "Skirmante", Degree.mg);
 		System.out.println(pr2);
-		
 
 	}
 }
