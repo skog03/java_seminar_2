@@ -35,4 +35,28 @@ public class Student {
 			this.name = "Undefined";
 	}
 	
+	//constructors
+	//no-argument constructor, which initializes the default values
+	public Student() {
+		setStID();
+		setName("John");
+		setSurname("Doe");
+	}
+	
+	//argument constructor, which initializes variables based on input parameters
+	public Student(String name, String surname, degree profdegree) {
+		setStID(); 
+		setName(name);
+		setSurname(surname);
+	}
+
+	//toString
+	@Override
+	public String toString() {
+		return stID + ": " + name + " " + surname;
+	}
+	
+	
+	//other
+	
 }
