@@ -2,6 +2,7 @@ package service;
 
 import model.Course;
 import model.Degree;
+import model.Grade;
 import model.Professor;
 import model.Student;
 
@@ -27,6 +28,12 @@ public class MainService {
 		
 		Course c3 = new Course("Networking", 2, pr3);
 		System.out.println(c3);
+		
+		Grade g1 = new Grade();
+		System.out.println(g1);
+		
+		Grade g2 = new Grade(7, st2, c2);
+		System.out.println(g2);
 		
 		
 		
