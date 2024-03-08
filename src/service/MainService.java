@@ -24,8 +24,10 @@ public class MainService {
 		Professor pr2 = new Professor("Karina", "Skirmante", Degree.mg);
 		Professor pr3 = new Professor("Marcis", "Naktins", Degree.mg);
 		Professor pr4 = new Professor("Estere", "Vitola", Degree.mg);
+		Professor pr5 = new Professor("Jesus", "Alberto", Degree.phd);
+		Professor pr6 = new Professor("Juris", "Zagars", Degree.phd);
 		
-		allProfessors.addAll(Arrays.asList(pr1, pr2, pr3, pr4));
+		allProfessors.addAll(Arrays.asList(pr1, pr2, pr3, pr4, pr5, pr6));
 		
 		//TODO take a look at ArrayList class
 		for(int i = 0; i < allProfessors.size(); i++) {
@@ -67,14 +69,16 @@ public class MainService {
 		Grade g1 = new Grade();
 		Grade g2 = new Grade(7, st2, c2);
 		Grade g3 = new Grade(10, st3, c4);
-		Grade g4 = new Grade(7, st3, c2);
+		Grade g4 = new Grade(3, st3, c2);
 		Grade g5 = new Grade(4, st3, c2);
 		Grade g6 = new Grade(5, st2, c2);
 		Grade g7 = new Grade(9, st2, c4);
 		Grade g8 = new Grade(10, st4, c3);
 		Grade g9 = new Grade(6, st4, c4);
+		Grade g10 = new Grade(2, st4, c2);
+		Grade g11 = new Grade(3, st3, c2);
 		
-		allGrades.addAll(Arrays.asList(g1, g2, g3, g4,g5,g6,g7,g8,g9));
+		allGrades.addAll(Arrays.asList(g1, g2, g3, g4,g5,g6,g7,g8,g9,g10,g11));
 		
 		for(Grade tempG : allGrades) {
 			System.out.println(tempG);
@@ -111,6 +115,14 @@ public class MainService {
 			for(Student tempst : allStudents) {
 				System.out.println(tempst.getName() + " " + tempst.getSurname() + " -> " + calculateAVGForStudent(tempst));
 			}
+			
+			System.out.println("------------------------------------------");
+			
+			System.out.println("Nr of professors with PhD: " + countOfPhds());
+			
+			System.out.println("------------------------------------------");
+			
+			System.out.println("Fails in: "+ c2.getTitle() + " -> "+ countOfFails(c2));
 			
 		}
 		catch (Exception e) {
@@ -211,7 +223,38 @@ public class MainService {
 	
 	
 	
+	//TODO
 	
+	//how many professors have phD
+	
+	public static int countOfPhds() {
+		
+		int count = 0;
+		
+		for(Professor tempP : allProfessors ) {
+			if(tempP.getProfdegree().equals(Degree.phd)) {
+				count++;
+			}
+		}
+		return count;
+	}
+	
+	//how many grades are smaller than 4 in specific course
+	
+	public static int countOfFails(Course inputcourse) throws Exception{
+		if(inputcourse == null) throw new Exception("Problems with input");
+		
+		int count = 0;
+		
+		for(Grade tempG : allGrades) {
+			if(tempG.getCourse().equals(inputcourse) && tempG.getValue() < 4) {
+				count++;
+			}
+		}
+		return count;
+	}
+	
+	// how many CP prof needs to lead
 	
 	
 	
