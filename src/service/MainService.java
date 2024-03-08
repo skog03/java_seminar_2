@@ -35,7 +35,8 @@ public class MainService {
 		Grade g2 = new Grade(7, st2, c2);
 		System.out.println(g2);
 		
-		
+		public static ArrayList<Professor> profLists = new
+				ArrayList<>();
 		
 	}
 }
