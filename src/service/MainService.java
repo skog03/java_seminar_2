@@ -289,7 +289,7 @@ public class MainService {
 			//check if student already in list with personCode
 			if (tempst.getPersonCode().equals(personCode)) {
 				//if is throw exception{student already in system}
-				throw new Exception("Student already in system");
+				throw new Exception("Student is already in system");
 			}
 		}
 	
@@ -301,10 +301,30 @@ public class MainService {
 
 		
 	
-	public static void updateStudent() {
+	public static void updateStudentByPersonCode(String name, String surname, String personCode) throws Exception {
+		if (name == null || surname == null || personCode == null) throw new Exception("Wrong input");
 		
+		for(Student tempst : allStudents) {
+			if (tempst.getPersonCode().equals(personCode)) {
+				tempst.setName(name);
+				tempst.setSurname(surname);
+			}
+		}
+		
+		throw new Exception("Student not found");
 	}
 	
+	
+	public static void deleteStudent(String personCode) throws Exception{
+		if (personCode == null) throw new Exception("Wrong input");
+		
+		for(Student tempst : allStudents) {
+			if (tempst.getPersonCode().equals(personCode)) {
+				allStudents.remove(tempst);
+			}
+		}
+		throw new Exception("Student not found");
+	}
 	
 	
 	
