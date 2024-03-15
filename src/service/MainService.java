@@ -132,6 +132,7 @@ public class MainService {
 			System.out.println("------------------------------------------");
 			
 			System.out.println("CRUD function testing:");
+			System.out.println();
 			
 			createStudent("Janis","Berzins", "031097-34233");
 			createStudent("Jekabs","Berzins","120901-23122");
