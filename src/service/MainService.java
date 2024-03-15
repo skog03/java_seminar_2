@@ -108,6 +108,7 @@ public class MainService {
 			
 			System.out.println("------------------------------------------");
 			
+			System.out.println("All students and their average grade:");
 			for(Student tempst : allStudents) {
 				System.out.println(tempst.getName() + " " + tempst.getSurname() + " -> " + calculateAVGForStudent(tempst));
 			}
@@ -115,6 +116,7 @@ public class MainService {
 			
 			sortStudentsByAVG();
 			
+			System.out.println("Sorted students by average:");
 			for(Student tempst : allStudents) {
 				System.out.println(tempst.getName() + " " + tempst.getSurname() + " -> " + calculateAVGForStudent(tempst));
 			}
@@ -258,6 +260,24 @@ public class MainService {
 	}
 	
 	// how many CP prof needs to lead
+	
+	
+	//CRUD, Create, Retrieve, Update, Delete
+	
+	public static Student retrieveStudentByPersonCode(String inputPersonCode) throws Exception {
+		//TODO
+		//do validation
+		if(inputPersonCode == null) throw new Exception("Wrong input");
+		//need to go thru allStudents list and check if student is there
+		for(Student tempst : allStudents) {
+			//if it is: return the student
+			if(tempst.getPersonCode().equals(inputPersonCode)) {
+				return tempst;
+			}
+		}
+		//after for loop, necessary to throw exception
+		throw new Exception("Student not found");
+	}
 	
 	
 	
