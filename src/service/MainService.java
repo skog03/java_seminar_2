@@ -30,6 +30,7 @@ public class MainService {
 		allProfessors.addAll(Arrays.asList(pr1, pr2, pr3, pr4, pr5, pr6));
 		
 		//TODO take a look at ArrayList class
+		System.out.println("Professors:");
 		for(int i = 0; i < allProfessors.size(); i++) {
 			System.out.println(allProfessors.get(i));
 		}
@@ -39,12 +40,13 @@ public class MainService {
 		
 		
 		Student st1 = new Student();
-		Student st2 = new Student("Annija", "Aumale");
-		Student st3 = new Student("Lara", "Bernardes");
-		Student st4 = new Student("Viktors", "Kokins");
+		Student st2 = new Student("Annija", "Aumale", "281103-45682");
+		Student st3 = new Student("Lara", "Bernardes", "040702-21324");
+		Student st4 = new Student("Viktors", "Kokins", "123516-52361");
 		
 		allStudents.addAll(Arrays.asList(st1, st2, st3, st4));
 		
+		System.out.println("Students:");
 		for(Student tempSt : allStudents) {
 			System.out.println(tempSt);
 		}
@@ -59,7 +61,7 @@ public class MainService {
 		
 		allCourses.addAll(Arrays.asList(c1,c2,c3,c4, c5, c6));
 
-		
+		System.out.println("Courses:");
 		for(Course tempC : allCourses) {
 			System.out.println(tempC);
 		}
@@ -80,6 +82,7 @@ public class MainService {
 		
 		allGrades.addAll(Arrays.asList(g1, g2, g3, g4,g5,g6,g7,g8,g9,g10,g11));
 		
+		System.out.println("Grades:");
 		for(Grade tempG : allGrades) {
 			System.out.println(tempG);
 		}
