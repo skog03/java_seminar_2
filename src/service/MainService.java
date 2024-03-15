@@ -21,11 +21,11 @@ public class MainService {
 	
 	public static void main(String[] args) {
 		Professor pr1 = new Professor();
-		Professor pr2 = new Professor("Karina", "Skirmante", Degree.mg);
-		Professor pr3 = new Professor("Marcis", "Naktins", Degree.mg);
-		Professor pr4 = new Professor("Estere", "Vitola", Degree.mg);
-		Professor pr5 = new Professor("Jesus", "Alberto", Degree.phd);
-		Professor pr6 = new Professor("Juris", "Zagars", Degree.phd);
+		Professor pr2 = new Professor("Karina", "Skirmante","210323-12352", Degree.mg);
+		Professor pr3 = new Professor("Marcis", "Naktins","235123-12354", Degree.mg);
+		Professor pr4 = new Professor("Estere", "Vitola","945826-45318", Degree.mg);
+		Professor pr5 = new Professor("Jesus", "Alberto","064608-40392", Degree.phd);
+		Professor pr6 = new Professor("Juris", "Zagars","036524-23612", Degree.phd);
 		
 		allProfessors.addAll(Arrays.asList(pr1, pr2, pr3, pr4, pr5, pr6));
 		
