@@ -1,6 +1,6 @@
 package model;
 
-public class Professor {
+public class Professor extends Person{
 	//variables
 	private long pID;
 	private String name;
