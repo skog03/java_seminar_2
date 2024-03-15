@@ -279,6 +279,31 @@ public class MainService {
 		throw new Exception("Student not found");
 	}
 	
+	public static void createStudent(String name, String surname, String personCode) throws Exception {
+		//TODO
+		
+		//do validation
+		if(name == null || surname == null || personCode == null) throw new Exception("Wrong input");
+		//go thru allStudents list
+		for(Student tempst : allStudents) {
+			//check if student already in list with personCode
+			if (tempst.getPersonCode().equals(personCode)) {
+				//if is throw exception{student already in system}
+				throw new Exception("Student already in system");
+			}
+		}
+	
+		//if is not: create new student
+		Student newStudent = new Student(name, surname, personCode);
+		//store new student in allStudents arrayList
+		allStudents.add(newStudent);
+	}
+
+		
+	
+	public static void updateStudent() {
+		
+	}
 	
 	
 	
@@ -296,4 +321,13 @@ public class MainService {
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	
+
 }
+
